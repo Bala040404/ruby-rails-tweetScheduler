@@ -1,0 +1,19 @@
+<h1 class="d-flex justify-content-center" >Sign in</h1>
+<div class="container">
+<%=form_with url:signin_path do |form| %>
+
+        <div class="mb-3">
+        <%=form.label :email %>
+        <%= form.text_field:email, class:"form-control"%>
+        </div >
+
+        <div class=" mb-3">
+        <%=form.label :password%>
+        <%= form.password_field:password, class:"form-control"%>
+        </div>
+
+        <div class="mb-3">
+            <%= form.submit "signin" ,class: "btn btn-info" %>
+        </div>
+    </div>
+<%end %>
